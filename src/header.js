@@ -1,14 +1,16 @@
+import React from "react"
 import './index.css'
-import img from './images/trollface.png'
 
-export default function Navbar() {
+function Header() {
     return (
-        <div className='container'>
-            <div className='navbar'>
-                <img src={img} />
-                <h1>Meme Generator</h1>
-            </div>
-            <h5>React Course - Project 3</h5>
-        </div>
+        <header>
+            <img 
+                src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png" 
+                alt="Problem?"
+            />
+            <p>Meme Generator</p>
+        </header>
     )
 }
+
+export default Header
