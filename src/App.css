@@ -66,3 +66,38 @@
   border:2px solid blueviolet;
   border-radius: 10px;
 }
+
+.contact{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card{
+  background-color: #a7a7a8;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  
+}
+
+.img{
+  width: 100px;
+  margin-top: 30px;
+} 
+
+.contact h6{
+  margin-top: -10px;
+  font-size: 15px;
+}
+
+.contact p{
+  margin-top: -10px;
+  padding-bottom: 30px;
+}
