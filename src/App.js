@@ -5,22 +5,19 @@ import React from 'react'
 
 function App() {
 
-  let [count, setCount] = React.useState(0)
+  const [thingsArray, setThingsArray] = React.useState(["thing1", "thing2"])
 
-  function add(){
-    setCount(count = count + 1)
+  function addItem(){
+    setThingsArray(prevState =>{
+      return [...prevState, `Thing ${prevState.length + 1}`]
+    })
   }
 
-  function sub(){
-    setCount(count-1)
-  }
+ let thingsElement = thingsArray.map(thing => <p key={thing}>{thing}</p>)
   return (
     <div className="App">
-      <button className='counter-minus' onClick={sub}>-</button>
-      <div className='counter-count'>
-        <h1>{count}</h1>
-      </div>
-      <button onClick={add} className='counter-plus'>+</button>
+      <button onClick={addItem}>Add Item</button>
+      {thingsElement}
     </div>
   );
 }
